@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard — Alex Morgan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-8VFvE0PkkpFmSPrbr30YIOCwVDDDeWGPA7eGRIDcN+xr3aMcMBXNlu1qNbfXDnpa9eKJeNEqXWiwxupCSvJ0VQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style-dark.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+
+<body data-theme="light">
+  <div class="admin-wrapper">
+    <aside class="admin-sidebar">
+      <div class="brand"><i class="fa-solid fa-gem"></i> Alex Admin</div>
+      <nav class="d-flex flex-column gap-2">
+        <a class="active" href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+        <a href="projects.html"><i class="fa-solid fa-briefcase"></i> Projects</a>
+        <a href="add-project.html"><i class="fa-solid fa-plus-circle"></i> Add Project</a>
+        <a href="blog-posts.html"><i class="fa-solid fa-pen-to-square"></i> Blog Posts</a>
+        <a href="messages.html"><i class="fa-solid fa-inbox"></i> Messages</a>
+        <a href="testimonials-manage.html"><i class="fa-solid fa-comment-dots"></i> Testimonials</a>
+        <a href="analytics.html"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+        <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+      </nav>
+    </aside>
+    <div class="admin-main">
+      <header class="admin-header">
+        <div>
+          <h1 class="h3 mb-1">Welcome back, Alex</h1>
+          <p class="text-muted mb-0">Here’s an overview of your portfolio performance.</p>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <button class="btn btn-outline-primary admin-sidebar-toggle" type="button" data-admin-toggle>
+            <i class="fa-solid fa-bars"></i> Menu
+          </button>
+          <button class="btn btn-primary" type="button"><i class="fa-solid fa-plus me-2"></i>New project</button>
+        </div>
+      </header>
+
+      <section class="admin-cards mb-4">
+        <div class="admin-card">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <p class="text-muted mb-1">Total projects</p>
+              <h3 class="mb-1">32</h3>
+              <small class="text-success"><i class="fa-solid fa-arrow-up"></i> +4 this quarter</small>
+            </div>
+            <span class="badge bg-primary-subtle text-primary-emphasis"><i class="fa-solid fa-briefcase"></i></span>
+          </div>
+        </div>
+        <div class="admin-card">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <p class="text-muted mb-1">Blog posts</p>
+              <h3 class="mb-1">18</h3>
+              <small class="text-success"><i class="fa-solid fa-arrow-up"></i> +2 this month</small>
+            </div>
+            <span class="badge bg-success-subtle text-success-emphasis"><i class="fa-solid fa-file-pen"></i></span>
+          </div>
+        </div>
+        <div class="admin-card">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <p class="text-muted mb-1">New messages</p>
+              <h3 class="mb-1">12</h3>
+              <small class="text-danger"><i class="fa-solid fa-arrow-up"></i> Needs reply</small>
+            </div>
+            <span class="badge bg-danger-subtle text-danger-emphasis"><i class="fa-solid fa-inbox"></i></span>
+          </div>
+        </div>
+        <div class="admin-card">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <p class="text-muted mb-1">Visitors (30d)</p>
+              <h3 class="mb-1">18,420</h3>
+              <small class="text-success"><i class="fa-solid fa-arrow-up"></i> +12%</small>
+            </div>
+            <span class="badge bg-warning-subtle text-warning-emphasis"><i class="fa-solid fa-chart-line"></i></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="row g-4">
+        <div class="col-lg-8">
+          <div class="admin-card h-100">
+            <h5 class="mb-3">Engagement summary</h5>
+            <canvas id="trafficChart" height="180"></canvas>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="admin-card h-100">
+            <h5 class="mb-3">Top sources</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Organic search <span class="badge bg-primary rounded-pill">45%</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Social <span class="badge bg-primary rounded-pill">28%</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Referrals <span class="badge bg-primary rounded-pill">17%</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Email <span class="badge bg-primary rounded-pill">10%</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-table-card mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 class="mb-0">Recent projects</h5>
+          <a class="btn btn-sm btn-outline-primary" href="projects.html">View all</a>
+        </div>
+        <table class="table align-middle">
+          <thead>
+            <tr>
+              <th scope="col">Project</th>
+              <th scope="col">Category</th>
+              <th scope="col">Status</th>
+              <th scope="col">Updated</th>
+              <th scope="col" class="text-end">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>InsightFlow Dashboard</td>
+              <td>Product Design</td>
+              <td><span class="badge bg-success">Published</span></td>
+              <td>Oct 20, 2025</td>
+              <td class="text-end"><button class="btn btn-sm btn-outline-primary">Edit</button></td>
+            </tr>
+            <tr>
+              <td>NovaBank Mobile</td>
+              <td>UX/UI</td>
+              <td><span class="badge bg-warning text-dark">Draft</span></td>
+              <td>Oct 18, 2025</td>
+              <td class="text-end"><button class="btn btn-sm btn-outline-primary">Review</button></td>
+            </tr>
+            <tr>
+              <td>Revamp Studio Brand</td>
+              <td>Branding</td>
+              <td><span class="badge bg-success">Published</span></td>
+              <td>Oct 12, 2025</td>
+              <td class="text-end"><button class="btn btn-sm btn-outline-primary">Edit</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="../assets/js/theme-switcher.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    const ctx = document.getElementById("trafficChart");
+    if (ctx) {
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"],
+          datasets: [{
+            label: "Visitors",
+            data: [7200, 8400, 9100, 10800, 12000, 15800, 18420],
+            fill: true,
+            borderColor: "rgba(108, 99, 255, 1)",
+            backgroundColor: "rgba(108, 99, 255, 0.15)",
+            tension: 0.35,
+            pointRadius: 4
+          }]
+        },
+        options: {
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { beginAtZero: false, ticks: { callback: (value) => value.toLocaleString() } }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
+
+

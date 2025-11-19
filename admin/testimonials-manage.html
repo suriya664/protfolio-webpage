@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin — Testimonials</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-8VFvE0PkkpFmSPrbr30YIOCwVDDDeWGPA7eGRIDcN+xr3aMcMBXNlu1qNbfXDnpa9eKJeNEqXWiwxupCSvJ0VQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style-dark.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+
+<body data-theme="light">
+  <div class="admin-wrapper">
+    <aside class="admin-sidebar">
+      <div class="brand"><i class="fa-solid fa-gem"></i> Alex Admin</div>
+      <nav class="d-flex flex-column gap-2">
+        <a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+        <a href="projects.html"><i class="fa-solid fa-briefcase"></i> Projects</a>
+        <a href="add-project.html"><i class="fa-solid fa-plus-circle"></i> Add Project</a>
+        <a href="blog-posts.html"><i class="fa-solid fa-pen-to-square"></i> Blog Posts</a>
+        <a href="messages.html"><i class="fa-solid fa-inbox"></i> Messages</a>
+        <a class="active" href="testimonials-manage.html"><i class="fa-solid fa-comment-dots"></i> Testimonials</a>
+        <a href="analytics.html"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+        <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+      </nav>
+    </aside>
+    <div class="admin-main">
+      <header class="admin-header">
+        <div>
+          <h1 class="h3 mb-1">Testimonials</h1>
+          <p class="text-muted mb-0">Collect and manage social proof across your site.</p>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <button class="btn btn-outline-primary admin-sidebar-toggle" type="button" data-admin-toggle>
+            <i class="fa-solid fa-bars"></i> Menu
+          </button>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#testimonialForm"><i class="fa-solid fa-plus me-2"></i>Add testimonial</button>
+        </div>
+      </header>
+
+      <section class="collapse admin-card mb-4" id="testimonialForm">
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Client name*</label>
+            <input class="form-control" type="text" placeholder="Client name">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Role / Company</label>
+            <input class="form-control" type="text" placeholder="Role · Company">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Avatar URL</label>
+            <input class="form-control" type="url" placeholder="https://">
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Rating</label>
+            <select class="form-select">
+              <option>5</option>
+              <option>4.5</option>
+              <option>4</option>
+              <option>3.5</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Visibility</label>
+            <select class="form-select">
+              <option>Published</option>
+              <option>Draft</option>
+              <option>Hidden</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label class="form-label">Quote*</label>
+            <textarea class="form-control" rows="3" placeholder="Client feedback"></textarea>
+          </div>
+          <div class="col-12 d-flex justify-content-end gap-2">
+            <button class="btn btn-outline-secondary" type="reset">Cancel</button>
+            <button class="btn btn-primary" type="submit">Save testimonial</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="admin-table-card">
+        <table class="table align-middle">
+          <thead>
+            <tr>
+              <th scope="col">Client</th>
+              <th scope="col">Quote</th>
+              <th scope="col">Rating</th>
+              <th scope="col">Status</th>
+              <th scope="col">Updated</th>
+              <th scope="col" class="text-end">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="fw-semibold">Alicia Grant</div>
+                <small class="text-muted">VP Product · Lumen</small>
+              </td>
+              <td>“Alex elevated our design maturity overnight. Our activation rate jumped 32% thanks to the onboarding rework.”</td>
+              <td><span class="badge bg-warning text-dark"><i class="fa-solid fa-star"></i> 4.5</span></td>
+              <td><span class="badge bg-success">Published</span></td>
+              <td>Oct 22, 2025</td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-outline-primary me-1"><i class="fa-solid fa-pen"></i></button>
+                <button class="btn btn-sm btn-outline-secondary me-1"><i class="fa-solid fa-eye-slash"></i></button>
+                <button class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="fw-semibold">Helena Wu</div>
+                <small class="text-muted">Co-founder · Polaris Health</small>
+              </td>
+              <td>“The empathy Alex brought to patient journeys helped us design a telehealth platform people actually enjoy.”</td>
+              <td><span class="badge bg-warning text-dark"><i class="fa-solid fa-star"></i> 5.0</span></td>
+              <td><span class="badge bg-success">Published</span></td>
+              <td>Oct 18, 2025</td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-outline-primary me-1"><i class="fa-solid fa-pen"></i></button>
+                <button class="btn btn-sm btn-outline-secondary me-1"><i class="fa-solid fa-eye-slash"></i></button>
+                <button class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="fw-semibold">Noah Patel</div>
+                <small class="text-muted">Founder · FluxOps</small>
+              </td>
+              <td>“The component library Alex built saved our engineering team weeks every sprint. An incredible partner.”</td>
+              <td><span class="badge bg-warning text-dark"><i class="fa-solid fa-star"></i> 5.0</span></td>
+              <td><span class="badge bg-warning text-dark">Draft</span></td>
+              <td>Oct 14, 2025</td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-outline-primary me-1"><i class="fa-solid fa-pen"></i></button>
+                <button class="btn btn-sm btn-outline-secondary me-1"><i class="fa-solid fa-eye"></i></button>
+                <button class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/theme-switcher.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
+
+

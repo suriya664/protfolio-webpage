@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alex Morgan — Creative Portfolio</title>
+  <meta name="description" content="Personal portfolio for Alex Morgan, showcasing product design, frontend development, and creative storytelling.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-8VFvE0PkkpFmSPrbr30YIOCwVDDDeWGPA7eGRIDcN+xr3aMcMBXNlu1qNbfXDnpa9eKJeNEqXWiwxupCSvJ0VQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style-dark.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/portfolio-filters.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body data-theme="light">
+  <header class="fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Alex<span class="text-primary">Morgan</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavbar" aria-controls="primaryNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="primaryNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item active" href="index.html">Hero Intro</a></li>
+                <li><a class="dropdown-item" href="index-2.html">Video Background</a></li>
+                <li><a class="dropdown-item" href="index-3.html">Minimal Split</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero gradient-background">
+      <div id="particles-js" class="position-absolute top-0 start-0 w-100 h-100"></div>
+      <div class="container position-relative">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7 reveal-on-scroll">
+            <p class="hero-meta text-uppercase">Hello, I’m</p>
+            <h1>Alex Morgan</h1>
+            <div class="typed-roles text-muted" data-typed-roles="Product Designer|Frontend Developer|Visual Storyteller"></div>
+            <p class="mt-4 fs-5 text-muted">
+              I craft human-centred digital products that blend delightful experiences with measurable impact. From concept to launch, I translate complex ideas into intuitive interfaces and tell compelling product stories.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary btn-lg" href="portfolio.html">View Portfolio</a>
+              <a class="btn btn-outline-primary btn-lg" href="contact.html">Contact Me</a>
+            </div>
+          </div>
+          <div class="col-lg-5 reveal-on-scroll animate-delay-2">
+            <div class="profile-avatar animate-float">
+              <img
+                src="https://images.pexels.com/photos/6593408/pexels-photo-6593408.jpeg"
+                alt="Alex Morgan smiling in a studio workspace"
+                loading="lazy"
+                decoding="async"
+                width="400"
+                height="400"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="reveal-on-scroll">
+      <div class="container">
+        <div class="section-title">
+          <span>About me</span>
+          <h2>Design leader with a passion for meaningful products</h2>
+          <p>
+            With 8+ years of experience across SaaS, eCommerce, and fintech, I help teams build cohesive ecosystems that feel effortless and deliver value.
+          </p>
+        </div>
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <div class="card-soft">
+              <h3 class="mb-3">Hybrid creative & technologist</h3>
+              <p>
+                My process blends research-driven insights, design ops best practices, and code-level collaboration. I lead discovery workshops,
+                prototype rapidly, and partner closely with engineering to ship polished experiences.
+              </p>
+              <ul class="list-unstyled mt-4">
+                <li class="d-flex gap-3 mb-3"><i class="fa-solid fa-circle-check text-primary"></i><span>Design systems and component libraries</span></li>
+                <li class="d-flex gap-3 mb-3"><i class="fa-solid fa-circle-check text-primary"></i><span>Inclusive UX research and accessibility audits</span></li>
+                <li class="d-flex gap-3"><i class="fa-solid fa-circle-check text-primary"></i><span>Rapid prototyping with Webflow, React, and Framer</span></li>
+              </ul>
+              <a class="btn btn-outline-primary mt-4" href="about.html">Learn more</a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row g-4">
+              <div class="col-sm-6">
+                <div class="counter-card">
+                  <span class="counter-number" data-count="85" data-suffix="+">0</span>
+                  <p>Projects launched</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="counter-card">
+                  <span class="counter-number" data-count="25" data-suffix="+">0</span>
+                  <p>Happy clients</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="counter-card">
+                  <span class="counter-number" data-count="12" data-suffix="+">0</span>
+                  <p>Industry awards</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="counter-card">
+                  <span class="counter-number" data-count="5" data-suffix="+">0</span>
+                  <p>UX patents filed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="gradient-background reveal-on-scroll">
+      <div class="container">
+        <div class="section-title">
+          <span>Services</span>
+          <h2>What I can help you build</h2>
+          <p>Every engagement pairs strategic consulting with hands-on design & development to accelerate growth.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-3">
+            <div class="service-card">
+              <h4>Product strategy</h4>
+              <p>I map customer journeys, define success metrics, and align teams around validated opportunities.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="service-card">
+              <h4>UX/UI design</h4>
+              <p>Human-centred interfaces that balance usability with brand delight across platforms.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="service-card">
+              <h4>Frontend engineering</h4>
+              <p>Robust, accessible experiences in React, Vue, and Webflow with production-ready code.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="service-card">
+              <h4>Design ops & coaching</h4>
+              <p>Scale your design practice with systems, workflow automation, and team mentorship.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="reveal-on-scroll">
+      <div class="container">
+        <div class="section-title">
+          <span>Portfolio</span>
+          <h2>Selected highlights</h2>
+        </div>
+        <div class="portfolio-filter justify-content-center">
+          <button class="active" data-filter="*">All</button>
+          <button data-filter=".ui">UI/UX</button>
+          <button data-filter=".product">Product</button>
+          <button data-filter=".branding">Branding</button>
+        </div>
+        <div class="portfolio-grid row g-4 hero-gallery">
+          <div class="col-md-6 col-xl-4 portfolio-item ui" data-category="ui">
+            <a
+              class="portfolio-preview"
+              href="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=675&fit=crop"
+              data-gallery="portfolio"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=675&fit=crop"
+                alt="UI/UX Dashboard Design"
+                loading="lazy"
+                decoding="async"
+                width="900"
+                height="675"
+              >
+              <div class="item-overlay">
+                <h5>InsightFlow Analytics</h5>
+                <span>Data visualization UI/UX</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-xl-4 portfolio-item ui" data-category="ui">
+            <a
+              class="portfolio-preview"
+              href="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=900&h=675&fit=crop"
+              data-gallery="portfolio"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=900&h=675&fit=crop"
+                alt="Mobile App UI Design"
+                loading="lazy"
+                decoding="async"
+                width="900"
+                height="675"
+              >
+              <div class="item-overlay">
+                <h5>NovaBank Mobile</h5>
+                <span>Fintech mobile app UI/UX</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-xl-4 portfolio-item ui" data-category="ui">
+            <a
+              class="portfolio-preview"
+              href="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&h=675&fit=crop"
+              data-gallery="portfolio"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&h=675&fit=crop"
+                alt="Website Interface Design"
+                loading="lazy"
+                decoding="async"
+                width="900"
+                height="675"
+              >
+              <div class="item-overlay">
+                <h5>E-Commerce Platform</h5>
+                <span>Web UI/UX design</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <a class="btn btn-outline-primary" href="portfolio.html">Explore full portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="gradient-background reveal-on-scroll">
+      <div class="container">
+        <div class="section-title">
+          <span>Testimonials</span>
+          <h2>Partners love the momentum</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-4">
+            <div class="testimonial-card">
+              <div class="d-flex align-items-center gap-3">
+                <img
+                  class="rounded-circle"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face"
+                  alt="Portrait of Alicia Grant"
+                  loading="lazy"
+                  decoding="async"
+                  width="56"
+                  height="56"
+                >
+                <div>
+                  <h5 class="mb-0">Alicia Grant</h5>
+                  <small class="text-muted">VP Product, Lumen</small>
+                </div>
+              </div>
+              <div class="stars mt-3">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="mt-3 mb-0">
+                "Alex elevated our design maturity overnight. Our activation rate jumped 32% thanks to the onboarding rework."
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="testimonial-card">
+              <div class="d-flex align-items-center gap-3">
+                <img
+                  class="rounded-circle"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+                  alt="Portrait of Noah Patel"
+                  loading="lazy"
+                  decoding="async"
+                  width="56"
+                  height="56"
+                >
+                <div>
+                  <h5 class="mb-0">Noah Patel</h5>
+                  <small class="text-muted">Founder, FluxOps</small>
+                </div>
+              </div>
+              <div class="stars mt-3">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="mt-3 mb-0">
+                "The component library Alex built saved our engineering team weeks every sprint. An incredible partner."
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="testimonial-card">
+              <div class="d-flex align-items-center gap-3">
+                <img
+                  class="rounded-circle"
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
+                  alt="Portrait of Sophia Riley"
+                  loading="lazy"
+                  decoding="async"
+                  width="56"
+                  height="56"
+                >
+                <div>
+                  <h5 class="mb-0">Sophia Riley</h5>
+                  <small class="text-muted">Creative Director, Northbay</small>
+                </div>
+              </div>
+              <div class="stars mt-3">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="mt-3 mb-0">
+                "Alex's storytelling unlocked executive buy-in on our rebrand. The campaign won 3 international awards."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="reveal-on-scroll">
+      <div class="container">
+        <div class="section-title">
+          <span>Latest posts</span>
+          <h2>Insights from the studio</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-4">
+            <article class="blog-card">
+              <img
+                class="blog-card__media"
+                src="https://media.istockphoto.com/id/2185114510/photo/process-diagram-with-3d-gear-icon-centered-among-sequential-circular-steps-3d-rendering.jpg?b=1&s=612x612&w=0&k=20&c=zdyxgCfg_ddEHJFzyxGCY-y0MLECwOSt-t5dSn2h2IE="
+                alt="Design systems planning on a laptop with sketches"
+                loading="lazy"
+                decoding="async"
+                width="900"
+                height="675"
+              >
+              <div class="p-4">
+                <div class="blog-meta mb-3">
+                  <span><i class="fa-regular fa-calendar"></i> Oct 02, 2025</span>
+                  <span><i class="fa-regular fa-folder-open"></i> Design Ops</span>
+                </div>
+                <h4>Scaling design systems without slowing shipping velocity</h4>
+                <p class="text-muted">Key rituals, tools, and governance tips for growing teams.</p>
+                <a class="fw-semibold" href="blog-details.html">Read more</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="blog-card">
+              <img
+                class="blog-card__media"
+                src="https://images.pexels.com/photos/17485817/pexels-photo-17485817.png"
+                alt="Researchers collaborating around a workspace"
+                loading="lazy"
+                decoding="async"
+                width="900"
+                height="675"
+              >
+              <div class="p-4">
+                <div class="blog-meta mb-3">
+                  <span><i class="fa-regular fa-calendar"></i> Sep 19, 2025</span>
+                  <span><i class="fa-regular fa-folder-open"></i> UX Research</span>
+                </div>
+                <h4>Inclusive research playbook for early-stage products</h4>
+                <p class="text-muted">Build empathy loops that uncover edge cases before launch.</p>
+                <a class="fw-semibold" href="blog-details.html">Read more</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="blog-card">
+              <img
+                class="blog-card__media"
+                src="https://media.istockphoto.com/id/1530036313/photo/ux-prism-on-white-background.jpg?b=1&s=612x612&w=0&k=20&c=r74wANBQI3_9_bqLLQrwFrF6mk7yGsEXHtWAJgNf_8s="
+                alt="Storyboards illustrating motion design principles"
+                loading="lazy"
+                decoding="async"
+                width="900"
+                height="675"
+              >
+              <div class="p-4">
+                <div class="blog-meta mb-3">
+                  <span><i class="fa-regular fa-calendar"></i> Aug 30, 2025</span>
+                  <span><i class="fa-regular fa-folder-open"></i> Frontend</span>
+                </div>
+                <h4>Motion principles that improve conversion UX</h4>
+                <p class="text-muted">Micro-interactions can define the emotional story of your product.</p>
+                <a class="fw-semibold" href="blog-details.html">Read more</a>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <a class="btn btn-outline-primary" href="blog.html">View all articles</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="gradient-background reveal-on-scroll">
+      <div class="container">
+        <div class="section-title">
+          <span>Contact</span>
+          <h2>Let’s build something bold</h2>
+          <p>Ready to collaborate? Tell me about your product vision and timeline.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-5">
+            <div class="contact-card h-100">
+              <h4>Quick details</h4>
+              <p class="text-muted">
+                Prefer email? Reach me directly at
+                <a href="mailto:hello@alexmorgan.design">hello@alexmorgan.design</a>
+                or call <a href="tel:+14155550192">+1 415 555 0192</a>.
+              </p>
+              <ul class="list-unstyled mt-4">
+                <li class="d-flex gap-3 mb-3"><i class="fa-solid fa-location-dot text-primary"></i><span>San Francisco, CA</span></li>
+                <li class="d-flex gap-3 mb-3"><i class="fa-solid fa-phone text-primary"></i><span><a class="text-decoration-none" href="tel:+14155550192">+1 415 555 0192</a></span></li>
+                <li class="d-flex gap-3 mb-3"><i class="fa-solid fa-clock text-primary"></i><span>Mon–Fri, 9am–6pm PST</span></li>
+                <li class="d-flex gap-3"><i class="fa-solid fa-circle-nodes text-primary"></i><span>Remote-friendly & available worldwide</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="contact-card">
+              <h4>Project planner</h4>
+              <form id="contact-form" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">Full name*</label>
+                    <input class="form-control" type="text" name="name" placeholder="Jane Doe" data-required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Email*</label>
+                    <input class="form-control" type="email" name="email" placeholder="you@company.com" data-required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Company</label>
+                    <input class="form-control" type="text" name="company" placeholder="Company name">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Project type*</label>
+                    <select class="form-select" name="project" data-required>
+                      <option value="">Select an option</option>
+                      <option value="product">Product strategy</option>
+                      <option value="ux">UX/UI design</option>
+                      <option value="frontend">Frontend development</option>
+                      <option value="ops">Design operations</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Message*</label>
+                    <textarea class="form-control" rows="4" name="message" placeholder="Tell me about your goals…" data-required></textarea>
+                  </div>
+                  <div class="col-12 d-flex flex-column flex-sm-row align-items-sm-center gap-3">
+                    <button class="btn btn-primary" type="submit">Send message</button>
+                    <span class="form-feedback small"></span>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <a class="footer-brand" href="index.html">Alex<span class="text-primary">Morgan</span></a>
+          <p class="footer-text">Product designer & frontend engineer shaping inclusive experiences and scalable systems for high-growth teams.</p>
+          <div class="footer-social-icons">
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Explore</h6>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6>Services</h6>
+          <ul>
+            <li><a href="services.html">Product strategy</a></li>
+            <li><a href="services.html">UX/UI design</a></li>
+            <li><a href="services.html">Frontend engineering</a></li>
+            <li><a href="services.html">Design ops & coaching</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h6>Contact</h6>
+          <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i><span>San Francisco, CA · Remote worldwide</span></li>
+            <li><i class="fa-solid fa-phone"></i><a href="tel:+14155550192">+1 415 555 0192</a></li>
+            <li><i class="fa-solid fa-envelope"></i><a href="mailto:hello@alexmorgan.design">hello@alexmorgan.design</a></li>
+            <li><i class="fa-solid fa-clock"></i><span>Mon–Fri · 9am–6pm PST</span></li>
+          </ul>
+          <button class="btn btn-outline-light btn-sm footer-theme-toggle" type="button" data-toggle-theme>
+            <i class="fa-solid fa-moon"></i>
+            <span>Dark mode</span>
+          </button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Alex Morgan. All rights reserved.</span>
+        <span>Crafting inclusive products with measurable impact.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+  <script src="assets/js/typed.js"></script>
+  <script src="assets/js/particles.min.js"></script>
+  <script src="assets/js/glightbox.min.js"></script>
+  <script src="assets/js/theme-switcher.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    setTimeout(() => {
+      if (window.particlesJS) {
+        particlesJS("particles-js", {
+          particles: {
+            number: { value: 45, density: { enable: true, value_area: 900 } },
+            color: { value: "#6c63ff" },
+            opacity: { value: 0.3, random: true },
+            size: { value: 3, random: true },
+            line_linked: { enable: true, distance: 150, color: "#6c63ff", opacity: 0.2, width: 1 },
+            move: { enable: true, speed: 1.5 },
+          },
+          interactivity: {
+            detectsOn: "canvas",
+            events: { onhover: { enable: true, mode: "grab" } },
+            modes: { grab: { distance: 200, line_linked: { opacity: 0.35 } } },
+          },
+          retina_detect: true,
+        });
+      }
+    }, 600);
+  </script>
+</body>
+
+</html>
+

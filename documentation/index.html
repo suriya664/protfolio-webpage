@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio Template Documentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: "Poppins", "Segoe UI", sans-serif;
+      background: #f6f7fb;
+      color: #212529;
+      padding: 48px 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-weight: 600;
+    }
+
+    code {
+      background: rgba(25, 29, 64, 0.07);
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+
+    pre {
+      background: #0f123e;
+      color: #fff;
+      padding: 16px;
+      border-radius: 12px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="mb-5 text-center">
+      <h1 class="display-5 mb-3">Alex Morgan Portfolio Template</h1>
+      <p class="lead text-muted">Static HTML template featuring three landing variants, rich inner pages, and a Bootstrap-powered admin UI.</p>
+    </header>
+
+    <section class="mb-5">
+      <h2>Getting started</h2>
+      <p>All pages are static HTML and use CDN-hosted dependencies for Bootstrap 5, Font Awesome 6, GLightbox, Isotope, Typed.js, particles.js, and Chart.js.</p>
+      <ol>
+        <li>Open <code>index.html</code> in a browser to view the default landing page.</li>
+        <li>Review alternative landings at <code>index-2.html</code> and <code>index-3.html</code>.</li>
+        <li>To customize styling, edit files inside <code>assets/css/</code> — primary tokens live in <code>style.css</code>.</li>
+        <li>JavaScript interactions (nav, filters, typed text, lightbox, counters, admin toggles, etc.) live in <code>assets/js/main.js</code>.</li>
+      </ol>
+    </section>
+
+    <section class="mb-5">
+      <h2>Folder structure</h2>
+      <pre><code>portfolio-template/
+├── index.html
+├── index-2.html
+├── index-3.html
+├── about.html
+├── resume.html
+├── portfolio.html
+├── project-details.html
+├── services.html
+├── blog.html
+├── blog-details.html
+├── contact.html
+├── testimonials.html
+├── 404.html
+├── admin/
+│   ├── dashboard.html
+│   ├── projects.html
+│   ├── add-project.html
+│   ├── blog-posts.html
+│   ├── messages.html
+│   ├── testimonials-manage.html
+│   ├── analytics.html
+│   └── settings.html
+├── assets/
+│   ├── css/
+│   ├── js/
+│   ├── images/
+│   ├── fonts/
+│   ├── icons/
+│   └── resume/
+└── documentation/
+    └── index.html</code></pre>
+    </section>
+
+    <section class="mb-5">
+      <h2>Key dependencies</h2>
+      <ul>
+        <li><strong>Bootstrap 5</strong> via CDN (see <code>assets/css/bootstrap.min.css</code> & <code>assets/js/bootstrap.bundle.min.js</code>).</li>
+        <li><strong>Font Awesome</strong> for iconography.</li>
+        <li><strong>GLightbox</strong> for portfolio lightbox galleries.</li>
+        <li><strong>Isotope</strong> for portfolio filtering and masonry layout.</li>
+        <li><strong>Typed.js</strong> for hero typing animation with fallback in <code>main.js</code>.</li>
+        <li><strong>particles.js</strong> for hero background effects on the main landing.</li>
+        <li><strong>Chart.js</strong> for analytics visualizations in the admin UI.</li>
+      </ul>
+    </section>
+
+    <section class="mb-5">
+      <h2>Customization notes</h2>
+      <ul>
+        <li><strong>Theme toggle:</strong> Works across pages via <code>data-toggle-theme</code> buttons and <code>theme-switcher.js</code>.</li>
+        <li><strong>Hero variants:</strong>
+          <ul>
+            <li><code>index.html</code> — classic hero with particles, typed text, CTA buttons, and counters.</li>
+            <li><code>index-2.html</code> — video background hero.</li>
+            <li><code>index-3.html</code> — minimalist split layout with theme toggle.</li>
+          </ul>
+        </li>
+        <li><strong>Portfolio pages:</strong> Use Isotope filtering, GLightbox modals, and support fallback filtering when JS dependencies are unavailable.</li>
+        <li><strong>Admin area:</strong> Sidebar toggled via <code>data-admin-toggle</code> (mobile support). Each page is structured with Bootstrap cards, tables, and forms.</li>
+      </ul>
+    </section>
+
+    <section class="mb-5">
+      <h2>Forms & interactivity</h2>
+      <ul>
+        <li><strong>Contact forms:</strong> Basic HTML forms with client-side validation hooks; they do not submit to a backend.</li>
+        <li><strong>Counters & progress:</strong> Animated on scroll using Intersection Observers in <code>main.js</code>.</li>
+        <li><strong>Portfolio filter fallback:</strong> If Isotope CDN fails, vanilla JS filtering keeps items usable.</li>
+      </ul>
+    </section>
+
+    <section class="mb-5">
+      <h2>Customization prompts (Cursor)</h2>
+      <p>Use these quick prompts inside Cursor AI to adjust content:</p>
+      <ul>
+        <li><code>“Update home hero text to highlight AI consulting services.”</code></li>
+        <li><code>“Swap portfolio images with local assets in assets/images/portfolio.”</code></li>
+        <li><code>“Adjust admin analytics chart data to reflect latest metrics.”</code></li>
+        <li><code>“Add new blog card about design leadership to blog.html.”</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Next steps</h2>
+      <ol>
+        <li>Replace placeholder images with brand assets located in <code>assets/images/</code>.</li>
+        <li>Update social links, contact information, and resume PDF (<code>assets/resume/my-cv.pdf</code>).</li>
+        <li>Integrate backend services for contact form handling and admin authentication if needed.</li>
+        <li>Configure analytics scripts (GA or other) through <code>admin/settings.html</code> fields.</li>
+      </ol>
+    </section>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

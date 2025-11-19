@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin — Blog Posts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-8VFvE0PkkpFmSPrbr30YIOCwVDDDeWGPA7eGRIDcN+xr3aMcMBXNlu1qNbfXDnpa9eKJeNEqXWiwxupCSvJ0VQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style-dark.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+
+<body data-theme="light">
+  <div class="admin-wrapper">
+    <aside class="admin-sidebar">
+      <div class="brand"><i class="fa-solid fa-gem"></i> Alex Admin</div>
+      <nav class="d-flex flex-column gap-2">
+        <a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+        <a href="projects.html"><i class="fa-solid fa-briefcase"></i> Projects</a>
+        <a href="add-project.html"><i class="fa-solid fa-plus-circle"></i> Add Project</a>
+        <a class="active" href="blog-posts.html"><i class="fa-solid fa-pen-to-square"></i> Blog Posts</a>
+        <a href="messages.html"><i class="fa-solid fa-inbox"></i> Messages</a>
+        <a href="testimonials-manage.html"><i class="fa-solid fa-comment-dots"></i> Testimonials</a>
+        <a href="analytics.html"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+        <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+      </nav>
+    </aside>
+    <div class="admin-main">
+      <header class="admin-header">
+        <div>
+          <h1 class="h3 mb-1">Blog posts</h1>
+          <p class="text-muted mb-0">Draft, schedule, and publish long-form articles.</p>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <button class="btn btn-outline-primary admin-sidebar-toggle" type="button" data-admin-toggle>
+            <i class="fa-solid fa-bars"></i> Menu
+          </button>
+          <button class="btn btn-primary" type="button"><i class="fa-solid fa-plus me-2"></i>New post</button>
+        </div>
+      </header>
+
+      <section class="admin-card mb-4">
+        <form class="row g-3">
+          <div class="col-md-4">
+            <label class="form-label">Search posts</label>
+            <input class="form-control" type="search" placeholder="Find by title or keyword">
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Category</label>
+            <select class="form-select">
+              <option value="">All categories</option>
+              <option>Leadership</option>
+              <option>Design Systems</option>
+              <option>Product</option>
+              <option>Workshops</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Status</label>
+            <select class="form-select">
+              <option value="">Any</option>
+              <option>Draft</option>
+              <option>Scheduled</option>
+              <option>Published</option>
+            </select>
+          </div>
+          <div class="col-md-2 d-flex align-items-end">
+            <button class="btn btn-outline-primary w-100" type="submit">Apply</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="admin-table-card">
+        <table class="table align-middle">
+          <thead>
+            <tr>
+              <th scope="col">Title</th>
+              <th scope="col">Category</th>
+              <th scope="col">Status</th>
+              <th scope="col">Published</th>
+              <th scope="col">Views</th>
+              <th scope="col" class="text-end">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="fw-semibold">Building resilient design teams in uncertain markets</div>
+                <small class="text-muted">Updated 2 days ago</small>
+              </td>
+              <td>Leadership</td>
+              <td><span class="badge bg-success">Published</span></td>
+              <td>Oct 26, 2025</td>
+              <td>2,430</td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-outline-primary me-1"><i class="fa-solid fa-pen"></i></button>
+                <button class="btn btn-sm btn-outline-secondary me-1"><i class="fa-solid fa-copy"></i></button>
+                <button class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="fw-semibold">Design system guardrails for fast-scaling startups</div>
+                <small class="text-muted">Updated 1 week ago</small>
+              </td>
+              <td>Design Systems</td>
+              <td><span class="badge bg-success">Published</span></td>
+              <td>Oct 12, 2025</td>
+              <td>1,890</td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-outline-primary me-1"><i class="fa-solid fa-pen"></i></button>
+                <button class="btn btn-sm btn-outline-secondary me-1"><i class="fa-solid fa-copy"></i></button>
+                <button class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="fw-semibold">Crafting KPI dashboards that drive action</div>
+                <small class="text-muted">Scheduled for next week</small>
+              </td>
+              <td>Product</td>
+              <td><span class="badge bg-warning text-dark">Scheduled</span></td>
+              <td>Nov 02, 2025</td>
+              <td>—</td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-outline-primary me-1"><i class="fa-solid fa-pen"></i></button>
+                <button class="btn btn-sm btn-outline-secondary me-1"><i class="fa-solid fa-copy"></i></button>
+                <button class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="fw-semibold">Running inclusive co-creation workshops</div>
+                <small class="text-muted">Draft · needs review</small>
+              </td>
+              <td>Workshops</td>
+              <td><span class="badge bg-secondary">Draft</span></td>
+              <td>—</td>
+              <td>—</td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-outline-primary me-1"><i class="fa-solid fa-pen"></i></button>
+                <button class="btn btn-sm btn-outline-secondary me-1"><i class="fa-solid fa-copy"></i></button>
+                <button class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/theme-switcher.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
+
+

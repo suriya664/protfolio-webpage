@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin — Add Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-8VFvE0PkkpFmSPrbr30YIOCwVDDDeWGPA7eGRIDcN+xr3aMcMBXNlu1qNbfXDnpa9eKJeNEqXWiwxupCSvJ0VQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style-dark.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+
+<body data-theme="light">
+  <div class="admin-wrapper">
+    <aside class="admin-sidebar">
+      <div class="brand"><i class="fa-solid fa-gem"></i> Alex Admin</div>
+      <nav class="d-flex flex-column gap-2">
+        <a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+        <a href="projects.html"><i class="fa-solid fa-briefcase"></i> Projects</a>
+        <a class="active" href="add-project.html"><i class="fa-solid fa-plus-circle"></i> Add Project</a>
+        <a href="blog-posts.html"><i class="fa-solid fa-pen-to-square"></i> Blog Posts</a>
+        <a href="messages.html"><i class="fa-solid fa-inbox"></i> Messages</a>
+        <a href="testimonials-manage.html"><i class="fa-solid fa-comment-dots"></i> Testimonials</a>
+        <a href="analytics.html"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+        <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+      </nav>
+    </aside>
+    <div class="admin-main">
+      <header class="admin-header">
+        <div>
+          <h1 class="h3 mb-1">Add new project</h1>
+          <p class="text-muted mb-0">Share your latest work including assets, meta details, and visibility options.</p>
+        </div>
+        <button class="btn btn-outline-primary admin-sidebar-toggle" type="button" data-admin-toggle>
+          <i class="fa-solid fa-bars"></i> Menu
+        </button>
+      </header>
+
+      <form class="admin-card mb-4">
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Project title*</label>
+              <input class="form-control" type="text" placeholder="Enter project title">
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Slug</label>
+              <div class="input-group">
+                <span class="input-group-text">alexmorgan.design/projects/</span>
+                <input class="form-control" type="text" placeholder="insightflow-analytics">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Summary*</label>
+              <textarea class="form-control" rows="3" placeholder="Short intro displayed on cards"></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Case study content*</label>
+              <textarea class="form-control" rows="8" placeholder="Full case study details including process, outcomes, and metrics."></textarea>
+              <small class="text-muted">Supports markdown formatting.</small>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Category*</label>
+              <select class="form-select">
+                <option selected disabled>Select category</option>
+                <option>Product</option>
+                <option>UX/UI</option>
+                <option>Branding</option>
+                <option>Research</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Tags</label>
+              <input class="form-control" type="text" placeholder="Comma-separated e.g., SaaS, Dashboard">
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Client</label>
+              <input class="form-control" type="text" placeholder="Client or company name">
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">External link</label>
+              <input class="form-control" type="url" placeholder="https://">
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Status</label>
+              <select class="form-select">
+                <option>Draft</option>
+                <option>Published</option>
+                <option>Archived</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Cover image*</label>
+              <input class="form-control" type="file" accept="image/*">
+              <small class="text-muted">Recommended 1600 × 900px JPG or PNG.</small>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Gallery images</label>
+              <input class="form-control" type="file" accept="image/*" multiple>
+              <small class="text-muted">Upload up to 10 visuals that appear in the lightbox gallery.</small>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-end gap-2">
+          <button class="btn btn-outline-secondary" type="reset">Reset</button>
+          <button class="btn btn-primary" type="submit">Save project</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/theme-switcher.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
+
+

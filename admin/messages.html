@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin — Messages</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-8VFvE0PkkpFmSPrbr30YIOCwVDDDeWGPA7eGRIDcN+xr3aMcMBXNlu1qNbfXDnpa9eKJeNEqXWiwxupCSvJ0VQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style-dark.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+
+<body data-theme="light">
+  <div class="admin-wrapper">
+    <aside class="admin-sidebar">
+      <div class="brand"><i class="fa-solid fa-gem"></i> Alex Admin</div>
+      <nav class="d-flex flex-column gap-2">
+        <a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+        <a href="projects.html"><i class="fa-solid fa-briefcase"></i> Projects</a>
+        <a href="add-project.html"><i class="fa-solid fa-plus-circle"></i> Add Project</a>
+        <a href="blog-posts.html"><i class="fa-solid fa-pen-to-square"></i> Blog Posts</a>
+        <a class="active" href="messages.html"><i class="fa-solid fa-inbox"></i> Messages</a>
+        <a href="testimonials-manage.html"><i class="fa-solid fa-comment-dots"></i> Testimonials</a>
+        <a href="analytics.html"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+        <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+      </nav>
+    </aside>
+    <div class="admin-main">
+      <header class="admin-header">
+        <div>
+          <h1 class="h3 mb-1">Messages</h1>
+          <p class="text-muted mb-0">Review and respond to inquiries submitted via your contact form.</p>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <button class="btn btn-outline-primary admin-sidebar-toggle" type="button" data-admin-toggle>
+            <i class="fa-solid fa-bars"></i> Menu
+          </button>
+          <button class="btn btn-primary" type="button"><i class="fa-solid fa-download me-2"></i>Export CSV</button>
+        </div>
+      </header>
+
+      <section class="admin-card mb-4">
+        <form class="row g-3">
+          <div class="col-md-4">
+            <label class="form-label">Search messages</label>
+            <input class="form-control" type="search" placeholder="Search by name or email">
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Status</label>
+            <select class="form-select">
+              <option value="">All</option>
+              <option>New</option>
+              <option>In progress</option>
+              <option>Archived</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Sort</label>
+            <select class="form-select">
+              <option>Newest</option>
+              <option>Oldest</option>
+              <option>Unread first</option>
+            </select>
+          </div>
+          <div class="col-md-2 d-flex align-items-end">
+            <button class="btn btn-outline-primary w-100" type="submit">Apply</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="admin-table-card">
+        <table class="table align-middle">
+          <thead>
+            <tr>
+              <th scope="col">From</th>
+              <th scope="col">Email</th>
+              <th scope="col">Project type</th>
+              <th scope="col">Budget</th>
+              <th scope="col">Received</th>
+              <th scope="col">Status</th>
+              <th scope="col" class="text-end">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-active">
+              <td>Emily Sanders</td>
+              <td>emily@northbay.co</td>
+              <td>Product strategy</td>
+              <td>$25k – $50k</td>
+              <td>Oct 23, 2025</td>
+              <td><span class="badge bg-primary">New</span></td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-outline-primary me-1"><i class="fa-solid fa-eye"></i></button>
+                <button class="btn btn-sm btn-outline-success me-1"><i class="fa-solid fa-check"></i></button>
+                <button class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>Ravi Patel</td>
+              <td>ravi@fluxops.io</td>
+              <td>Design system</td>
+              <td>$50k+</td>
+              <td>Oct 21, 2025</td>
+              <td><span class="badge bg-warning text-dark">In progress</span></td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-outline-primary me-1"><i class="fa-solid fa-eye"></i></button>
+                <button class="btn btn-sm btn-outline-success me-1"><i class="fa-solid fa-check"></i></button>
+                <button class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>Sara Martinez</td>
+              <td>sara@revampstudio.com</td>
+              <td>Brand identity</td>
+              <td>$10k – $25k</td>
+              <td>Oct 17, 2025</td>
+              <td><span class="badge bg-secondary">Archived</span></td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-outline-primary me-1"><i class="fa-solid fa-eye"></i></button>
+                <button class="btn btn-sm btn-outline-success me-1"><i class="fa-solid fa-check"></i></button>
+                <button class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>Michael Nguyen</td>
+              <td>michael@productgrid.io</td>
+              <td>Workshop</td>
+              <td>$10k – $25k</td>
+              <td>Oct 14, 2025</td>
+              <td><span class="badge bg-warning text-dark">In progress</span></td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-outline-primary me-1"><i class="fa-solid fa-eye"></i></button>
+                <button class="btn btn-sm btn-outline-success me-1"><i class="fa-solid fa-check"></i></button>
+                <button class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/theme-switcher.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
+
+

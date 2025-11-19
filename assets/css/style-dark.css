@@ -1,0 +1,317 @@
+:root[data-theme="dark"],
+body[data-theme="dark"] {
+  --color-background: #050608;
+  --color-surface: #0f1329;
+  --color-text: rgba(255, 255, 255, 0.93);
+  --color-text-muted: rgba(255, 255, 255, 0.65);
+  --color-border: rgba(255, 255, 255, 0.08);
+  --shadow-soft: 0 20px 40px -32px rgba(0, 0, 0, 0.9);
+}
+
+body[data-theme="dark"] .navbar {
+  background: rgba(15, 18, 62, 0.85);
+  backdrop-filter: blur(12px);
+}
+
+body[data-theme="dark"] .navbar.sticky {
+  background: rgba(15, 18, 62, 0.95);
+  box-shadow: 0 12px 24px -20px rgba(0, 0, 0, 0.8);
+}
+
+body[data-theme="dark"] .navbar-brand {
+  color: #fff;
+}
+
+body[data-theme="dark"] .navbar-brand .text-primary {
+  color: var(--color-primary);
+}
+
+body[data-theme="dark"] .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+body[data-theme="dark"] .navbar-nav .nav-link:hover {
+  color: #fff;
+  background: rgba(108, 99, 255, 0.3);
+}
+
+body[data-theme="dark"] .navbar-nav .nav-link.active {
+  color: #fff;
+  background: var(--color-primary);
+}
+
+body[data-theme="dark"] .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+body[data-theme="dark"] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+body[data-theme="dark"] .dropdown-menu {
+  background: rgba(15, 19, 41, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 24px -20px rgba(0, 0, 0, 0.9);
+}
+
+body[data-theme="dark"] .dropdown-item {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+body[data-theme="dark"] .dropdown-item:hover,
+body[data-theme="dark"] .dropdown-item:focus {
+  background: rgba(108, 99, 255, 0.25);
+  color: #fff;
+}
+
+body[data-theme="dark"] .dropdown-item.active {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+body[data-theme="dark"] .navbar-collapse {
+  background: transparent;
+}
+
+@media (max-width: 991.98px) {
+  body[data-theme="dark"] .navbar-collapse {
+    background: rgba(15, 18, 62, 0.95);
+    backdrop-filter: blur(12px);
+    border-radius: var(--radius-md);
+    margin-top: 12px;
+    padding: 16px;
+    box-shadow: 0 12px 24px -20px rgba(0, 0, 0, 0.8);
+  }
+}
+
+body[data-theme="dark"] .section-title span {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+body[data-theme="dark"] .card-soft,
+body[data-theme="dark"] .service-card,
+body[data-theme="dark"] .blog-card,
+body[data-theme="dark"] .timeline-content,
+body[data-theme="dark"] .contact-card,
+body[data-theme="dark"] .testimonial-card,
+body[data-theme="dark"] .counter-card,
+body[data-theme="dark"] .portfolio-filter,
+body[data-theme="dark"] .portfolio-card {
+  background: rgba(15, 19, 41, 0.95);
+  color: inherit;
+}
+
+body[data-theme="dark"] .service-card .service-icon {
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.25), rgba(255, 101, 132, 0.22));
+  border-color: rgba(108, 99, 255, 0.4);
+  color: var(--color-primary);
+}
+
+body[data-theme="dark"] .service-card .service-icon i {
+  color: var(--color-primary);
+}
+
+body[data-theme="dark"] .portfolio-item .item-overlay {
+  background: linear-gradient(180deg, rgba(15, 18, 62, 0.05), rgba(0, 0, 0, 0.85));
+}
+
+body[data-theme="dark"] .footer {
+  background: #03030d;
+}
+
+body[data-theme="dark"] .portfolio-card__tags span {
+  background: rgba(108, 99, 255, 0.25);
+  color: #fff;
+}
+
+body[data-theme="dark"] .portfolio-card__body {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body[data-theme="dark"] .portfolio-card__info p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+body[data-theme="dark"] .text-muted {
+  color: rgba(255, 255, 255, 0.68) !important;
+}
+
+body[data-theme="dark"] .hero .hero-meta {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+body[data-theme="dark"] .hero .social-links {
+  position: relative;
+  z-index: 10;
+}
+
+body[data-theme="dark"] .hero .social-links a {
+  position: relative;
+  z-index: 10;
+  background: var(--color-text);
+}
+
+body[data-theme="dark"] .hero .social-links a[aria-label="Dribbble"] {
+  background: #ea4c89;
+}
+
+body[data-theme="dark"] .hero .social-links a[aria-label="GitHub"] {
+  background: #24292f;
+}
+
+body[data-theme="dark"] .hero .social-links a[aria-label="LinkedIn"] {
+  background: #0a66c2;
+}
+
+body[data-theme="dark"] .hero .social-links a[aria-label="Behance"] {
+  background: #1769ff;
+}
+
+body[data-theme="dark"] .footer-social a {
+  background: #4a4a4a;
+}
+
+body[data-theme="dark"] .footer-social a:hover {
+  background: #5a5a5a;
+}
+
+body[data-theme="dark"] .btn-brand--facebook,
+body[data-theme="dark"] .btn-brand--instagram,
+body[data-theme="dark"] .btn-brand--twitter,
+body[data-theme="dark"] .btn-brand--youtube {
+  background: #4a4a4a;
+}
+
+body[data-theme="dark"] .btn-brand--facebook:hover,
+body[data-theme="dark"] .btn-brand--instagram:hover,
+body[data-theme="dark"] .btn-brand--twitter:hover,
+body[data-theme="dark"] .btn-brand--youtube:hover {
+  background: #5a5a5a;
+}
+
+body[data-theme="dark"] .footer-social-icons a {
+  color: #ffffff;
+}
+
+body[data-theme="dark"] .footer-social-icons a[aria-label="Facebook"] i {
+  color: #42a5f5 !important;
+  font-size: 1.5rem !important;
+  display: block !important;
+}
+
+body[data-theme="dark"] .footer-social-icons a[aria-label="Instagram"] i {
+  color: #fd1d1d !important;
+  font-size: 1.5rem !important;
+  display: block !important;
+}
+
+body[data-theme="dark"] .footer-social-icons a[aria-label="X (Twitter)"] i {
+  color: #ffffff !important;
+  font-size: 1.5rem !important;
+  display: block !important;
+}
+
+body[data-theme="dark"] .footer-social-icons a[aria-label="YouTube"] i {
+  color: #ff4444 !important;
+  font-size: 1.5rem !important;
+  display: block !important;
+}
+
+body[data-theme="dark"] .footer-social-icons a[aria-label="Facebook"]:hover i {
+  color: #64b5f6 !important;
+}
+
+body[data-theme="dark"] .footer-social-icons a[aria-label="Instagram"]:hover i {
+  color: #ff3040 !important;
+}
+
+body[data-theme="dark"] .footer-social-icons a[aria-label="X (Twitter)"]:hover i {
+  color: #ffffff !important;
+}
+
+body[data-theme="dark"] .footer-social-icons a[aria-label="YouTube"]:hover i {
+  color: #ff6666 !important;
+}
+
+body[data-theme="dark"] .carousel-control-prev,
+body[data-theme="dark"] .carousel-control-next {
+  background: rgba(15, 19, 41, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+body[data-theme="dark"] .carousel-control-prev:hover,
+body[data-theme="dark"] .carousel-control-next:hover {
+  background: rgba(15, 19, 41, 1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
+}
+
+body[data-theme="dark"] .carousel-control-prev-icon,
+body[data-theme="dark"] .carousel-control-next-icon {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+body[data-theme="dark"] .resume-card,
+body[data-theme="dark"] .resume-sidecard {
+  background: rgba(15, 19, 41, 0.95);
+  color: inherit;
+}
+
+body[data-theme="dark"] .resume-card__heading h5 {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+body[data-theme="dark"] .resume-card ul li {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+body[data-theme="dark"] .resume-section h2 {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+body[data-theme="dark"] .resume-skills h6 {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+body[data-theme="dark"] .resume-skills p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+body[data-theme="dark"] .badge.bg-primary-subtle {
+  background: rgba(108, 99, 255, 0.25) !important;
+  color: var(--color-primary) !important;
+}
+
+body[data-theme="dark"] .badge.bg-primary-subtle.text-primary-emphasis {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+body[data-theme="dark"] .resume-simple {
+  background: transparent;
+}
+
+body[data-theme="dark"] .resume-simple .resume-section h2 {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+body[data-theme="dark"] .resume-sidecard .text-primary {
+  color: var(--color-primary) !important;
+}
+
+body[data-theme="dark"] .resume-sidecard strong {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+body[data-theme="dark"] .resume-sidecard hr {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body[data-theme="dark"] .resume-card ul {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+body[data-theme="dark"] .resume-card ul li {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+

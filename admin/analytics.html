@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin — Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-8VFvE0PkkpFmSPrbr30YIOCwVDDDeWGPA7eGRIDcN+xr3aMcMBXNlu1qNbfXDnpa9eKJeNEqXWiwxupCSvJ0VQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style-dark.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+
+<body data-theme="light">
+  <div class="admin-wrapper">
+    <aside class="admin-sidebar">
+      <div class="brand"><i class="fa-solid fa-gem"></i> Alex Admin</div>
+      <nav class="d-flex flex-column gap-2">
+        <a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+        <a href="projects.html"><i class="fa-solid fa-briefcase"></i> Projects</a>
+        <a href="add-project.html"><i class="fa-solid fa-plus-circle"></i> Add Project</a>
+        <a href="blog-posts.html"><i class="fa-solid fa-pen-to-square"></i> Blog Posts</a>
+        <a href="messages.html"><i class="fa-solid fa-inbox"></i> Messages</a>
+        <a href="testimonials-manage.html"><i class="fa-solid fa-comment-dots"></i> Testimonials</a>
+        <a class="active" href="analytics.html"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+        <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+      </nav>
+    </aside>
+    <div class="admin-main">
+      <header class="admin-header">
+        <div>
+          <h1 class="h3 mb-1">Analytics</h1>
+          <p class="text-muted mb-0">Monitor portfolio performance, engagement, and growth.</p>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <button class="btn btn-outline-primary admin-sidebar-toggle" type="button" data-admin-toggle>
+            <i class="fa-solid fa-bars"></i> Menu
+          </button>
+          <button class="btn btn-primary" type="button"><i class="fa-solid fa-arrow-rotate-right me-2"></i>Refresh</button>
+        </div>
+      </header>
+
+      <section class="admin-cards mb-4">
+        <div class="admin-card">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <p class="text-muted mb-1">Monthly visitors</p>
+              <h3 class="mb-1">18,420</h3>
+              <small class="text-success"><i class="fa-solid fa-arrow-up"></i> +12% vs last month</small>
+            </div>
+            <span class="badge bg-primary-subtle text-primary-emphasis"><i class="fa-solid fa-users"></i></span>
+          </div>
+        </div>
+        <div class="admin-card">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <p class="text-muted mb-1">Average session</p>
+              <h3 class="mb-1">3m 42s</h3>
+              <small class="text-success"><i class="fa-solid fa-arrow-up"></i> +8%</small>
+            </div>
+            <span class="badge bg-success-subtle text-success-emphasis"><i class="fa-solid fa-stopwatch"></i></span>
+          </div>
+        </div>
+        <div class="admin-card">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <p class="text-muted mb-1">Conversion rate</p>
+              <h3 class="mb-1">4.3%</h3>
+              <small class="text-danger"><i class="fa-solid fa-arrow-down"></i> -0.6%</small>
+            </div>
+            <span class="badge bg-warning-subtle text-warning-emphasis"><i class="fa-solid fa-chart-column"></i></span>
+          </div>
+        </div>
+        <div class="admin-card">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <p class="text-muted mb-1">Newsletter signups</p>
+              <h3 class="mb-1">420</h3>
+              <small class="text-success"><i class="fa-solid fa-arrow-up"></i> +15%</small>
+            </div>
+            <span class="badge bg-info-subtle text-info-emphasis"><i class="fa-solid fa-envelope-open-text"></i></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="row g-4">
+        <div class="col-xl-8">
+          <div class="admin-card h-100">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="mb-0">Traffic overview</h5>
+              <select class="form-select form-select-sm w-auto">
+                <option selected>Last 6 months</option>
+                <option>Last 12 months</option>
+                <option>This year</option>
+              </select>
+            </div>
+            <canvas id="trafficOverview" height="220"></canvas>
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="admin-card h-100">
+            <h5 class="mb-3">Device split</h5>
+            <canvas id="deviceChart" height="220"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section class="row g-4 mt-1">
+        <div class="col-lg-6">
+          <div class="admin-card h-100">
+            <h5 class="mb-3">Top landing pages</h5>
+            <table class="table align-middle mb-0">
+              <thead>
+                <tr>
+                  <th>Page</th>
+                  <th>Visitors</th>
+                  <th>Avg time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>/index.html</td>
+                  <td>6,720</td>
+                  <td>2m 15s</td>
+                </tr>
+                <tr>
+                  <td>/portfolio.html</td>
+                  <td>4,130</td>
+                  <td>3m 02s</td>
+                </tr>
+                <tr>
+                  <td>/project-details.html</td>
+                  <td>3,440</td>
+                  <td>4m 18s</td>
+                </tr>
+                <tr>
+                  <td>/blog-details.html</td>
+                  <td>2,860</td>
+                  <td>3m 55s</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="admin-card h-100">
+            <h5 class="mb-3">Goal funnel</h5>
+            <canvas id="funnelChart" height="220"></canvas>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="../assets/js/theme-switcher.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    const trafficCtx = document.getElementById("trafficOverview");
+    if (trafficCtx) {
+      new Chart(trafficCtx, {
+        type: "line",
+        data: {
+          labels: ["May", "Jun", "Jul", "Aug", "Sep", "Oct"],
+          datasets: [
+            {
+              label: "Visitors",
+              data: [9200, 10100, 11400, 12800, 15200, 18420],
+              borderColor: "#6c63ff",
+              backgroundColor: "rgba(108, 99, 255, 0.15)",
+              fill: true,
+              tension: 0.35,
+              pointRadius: 4
+            },
+            {
+              label: "Unique visitors",
+              data: [7800, 8500, 9400, 11200, 13400, 16200],
+              borderColor: "#ff6584",
+              backgroundColor: "rgba(255, 101, 132, 0.12)",
+              fill: true,
+              tension: 0.35,
+              pointRadius: 4
+            }
+          ]
+        },
+        options: {
+          plugins: { legend: { display: true } },
+          scales: {
+            y: {
+              ticks: {
+                callback: (value) => value.toLocaleString()
+              }
+            }
+          }
+        }
+      });
+    }
+
+    const deviceCtx = document.getElementById("deviceChart");
+    if (deviceCtx) {
+      new Chart(deviceCtx, {
+        type: "doughnut",
+        data: {
+          labels: ["Desktop", "Mobile", "Tablet"],
+          datasets: [{
+            data: [58, 34, 8],
+            backgroundColor: ["#6c63ff", "#ff6584", "#4acfac"]
+          }]
+        },
+        options: {
+          plugins: { legend: { position: "bottom" } }
+        }
+      });
+    }
+
+    const funnelCtx = document.getElementById("funnelChart");
+    if (funnelCtx) {
+      new Chart(funnelCtx, {
+        type: "bar",
+        data: {
+          labels: ["Landing", "Portfolio view", "Contact started", "Message sent"],
+          datasets: [{
+            label: "Conversion funnel",
+            data: [100, 62, 18, 4.3],
+            backgroundColor: ["rgba(108, 99, 255, 0.8)", "rgba(99, 189, 255, 0.8)", "rgba(74, 207, 172, 0.8)", "rgba(255, 101, 132, 0.8)"]
+          }]
+        },
+        options: {
+          indexAxis: "y",
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { ticks: { callback: (value) => value + "%" }, max: 100 }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
+
